@@ -18,3 +18,14 @@ function university_features(){
   add_theme_support( 'title-tag');
 }
 add_action('after_setup_theme', 'university_features');
+
+
+function meks_which_template_is_loaded() {
+	if ( is_super_admin() ) {
+		global $template;
+		// print_r( $template );
+    dump($template);
+	}
+}
+ 
+add_action( 'wp_footer', 'meks_which_template_is_loaded' );
