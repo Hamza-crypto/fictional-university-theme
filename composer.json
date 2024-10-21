@@ -1,5 +1,19 @@
 {
-    "require": {
-        "symfony/var-dumper": "^6.4"
-    }
+   
+   "require-dev": {
+        "wp-coding-standards/wpcs": "^3.0",
+        "symfony/var-dumper": "^6.4",
+      "phpcompatibility/phpcompatibility-wp": "^2.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+      },
+      "scripts": {
+        "check:php": "vendor/bin/phpcs",
+        "check:php:full": "vendor/bin/phpcs --report=full",
+        "format:php": "vendor/bin/phpcbf"
+      }
+
 }
